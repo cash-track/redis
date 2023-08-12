@@ -3,7 +3,7 @@ export
 
 # Local config
 CONTAINER_NAME=cashtrack_redis
-DB_PORT=63790
+DB_PORT=6379
 
 # Deploy config
 REPO=cashtrack/redis
