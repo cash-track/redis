@@ -26,7 +26,7 @@ push:
 
 start:
 	mkdir -p data
-	docker run \
+	[[ "$(shell docker container inspect -f '{{.State.Running}}' $(CONTAINER_NAME))" == "true" ]] || docker run \
 	  --rm \
       --name $(CONTAINER_NAME) \
       --net cash-track-local \
